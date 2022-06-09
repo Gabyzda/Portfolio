@@ -7,6 +7,13 @@
     
 }
 
+body{
+    display: flexbox;
+    background-image: url(https://drive.google.com/uc?export=view&id=1bLSPlYpgXvaRhn03Nfur_O_uY8Ji864n);
+    background-size: 100%
+}
+
 img{
 max-width: 100%;    
 }
+

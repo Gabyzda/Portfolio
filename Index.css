@@ -3,10 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family:  Sans-serif;
+    text-decoration: none;
 }
 
 header{
     height: 100px;
+    top: 0;
+    left: 0;
 }
 
 .container_header{
@@ -16,11 +19,8 @@ header{
     padding-top: 80px;
     display: flex;
     justify-content:center;
-    align-items: center;
-}
-
-.logo img{
-    width: 120px;
+    align-items:center;
+    background-color: red;
 }
 
 .menu nav ul{
@@ -30,15 +30,30 @@ header{
 .menu nav ul li{
     list-style: none;
     padding: 0px 20px;
+    height: 100%;
+    position: relative;
+}
+
+nav > ul > li img{
+    width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu nav ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     text-decoration: none;
     color: #231a18;
     transition: opacity 300ms;
+   
 }
 
 .menu nav ul li a:hover{
@@ -49,6 +64,51 @@ header{
     display: none;
 }
 
+/*submenu*/
+
+nav ul li ul{
+    width: 200px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(250, 241, 241);
+    position: absolute;
+    top: 20px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 30px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: #231a18;
+    padding: 6px;
+    padding-left: 14x;
+    margin-top: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+nav ul li ul li a:hover{
+    background-color: #524845;
+    color: #f5eeed;
+    
+
+}
+
+/*FIN HEADER SUPERIOR*/
 
 @media ( max-width: 1024px ) {
     .container_header{

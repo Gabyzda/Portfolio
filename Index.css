@@ -44,3 +44,9 @@ header{
 .menu nav ul li a:hover{
     opacity: 0.6;
 }
+
+@media ( max-width: 1024px ) {
+    .container_header{
+        padding: 20px;
+    }
+}

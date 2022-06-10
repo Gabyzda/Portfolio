@@ -3,11 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family:  Sans-serif;
-    
-}
-
-body{
-    
 }
 
 header{
@@ -15,13 +10,12 @@ header{
 }
 
 .container_header{
-    max-width: 1200px;
     height: 100%;
     margin: auto;
     padding: 40px;
     padding-top: 80px;
     display: flex;
-    justify-content:baseline;
+    justify-content:center;
     align-items: center;
 }
 
@@ -31,7 +25,6 @@ header{
 
 .menu nav ul{
     display: flex;
-
 }
 
 .menu nav ul li{

@@ -7,11 +7,13 @@
 
 .container_header{
     height: 200px;
+    display: block;
 }
 
-.contenedor_logo, contenedor_menu{
+.contenedor_logo, menu_principal{
     width: 100%;
     height: 100px;
+    display: flex;
 }
 
 .contenedor_logo > a > img{

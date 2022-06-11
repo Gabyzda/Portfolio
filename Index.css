@@ -145,7 +145,7 @@ nav ul li ul li a:hover{
 
     nav > ul > li > a:hover{
         transform: scale(1);
-        padding: 0 10px;
+        padding: 10px 0px;
     }
 
     nav ul li ul{
@@ -163,17 +163,4 @@ nav ul li ul li a:hover{
         display: none;
     }
 
-    #label__check{
-        display: block;
-    }
-
-    .icon__menu{
-        display: flex;
-    }
-
-    #check__menu:checked ~ nav > ul{
-        height: 300px;
-        visibility: visible;
-        opacity: 1;
-    }
 }

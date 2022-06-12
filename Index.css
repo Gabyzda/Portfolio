@@ -90,7 +90,7 @@ nav > ul > li > ul{
     flex-direction: column; /*podría no colocarlo... peeero*/
     *background-color: #ced5de;
     position: absolute; /*para eliminar el ancho feísimo que tenia el menu*/
-    top: 90px; /*para que suba bello al ser seleccionado*/
+    *top: 90px; /*para que suba bello al ser seleccionado*/
     padding: 14px 0px;
     visibility: hidden; /*para que esté oculto*/
     opacity: 0; /*para lograr animacion hover*/
@@ -118,23 +118,19 @@ nav > ul > li > ul > li > a:hover{
 
 /*COMPLEMENTOS HEADER*/
 
-.name__b{
-    display: block;    
-}
 
 .mi_nombre > img{
     width: 600px;
     margin-left: 40px;
-    margin-bottom: 200px;
-    margin-top: -5000px;
-    padding-top: -100px;
+    margin-top: 110px;
     color: #262020;
 }
 
 .bienvenida h1{
-    width: 150px;
-    margin-left: 150px;
+    width: 300px;
+    margin-left: 100px;
     letter-spacing: 3px;
     font-size: 30px;
     line-height: 40px;
+    text-transform: uppercase;
 }

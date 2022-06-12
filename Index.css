@@ -12,22 +12,23 @@
 
 .contenedor_logo{
     width: 100%;
-    height: 100%x;
+    height: 75px; /*para quitar el espacio del logo*/
     margin:auto;
 	text-align:center;
+    position: relative;
+    top: 20px;
 }
 
 .contenedor_logo > a > img{
-    height: 150px;
+    height: 200px;
 }
 
 .menu_principal{
     width: 100%;
     margin: auto;
     text-align: center;
-    padding: 0px 20px; /*para que no se pegue al costado en responsive*/
     height: 100%; /*para que detecte su proporcion vertical*/
-    background-color: #ced5de; /*para probar submenu*/
+    *background-color: #ced5de; /*para probar submenu*/
 }
 
 nav{
@@ -37,6 +38,7 @@ nav{
 nav > ul{  /*se usa ">" para que se haga la modificacion a este solamente, no a los hijos*/
     height: 100%;
     display: flex;
+    justify-content:center;
     margin: auto;
     text-align: center;
 }
@@ -62,6 +64,16 @@ nav > ul > li > a:hover{
     transform: scale(1.1); /*para que crezca un poquito*/
 }
 
+#item_medio{
+    *margin-right: 10px;
+    *padding-right: -50px ;
+}
+                         /*los itens para meter el logo en el medio*/
+#item_medio2{
+    *margin-left: 100px;
+    padding-left: 300px;
+}
+
 /*submenu*/
 
 nav > ul > li > ul{
@@ -69,7 +81,7 @@ nav > ul > li > ul{
     list-style: none;
     display: flex;
     flex-direction: column; /*podría no colocarlo... peeero*/
-    background-color: #ced5de;
+    *background-color: #ced5de;
     position: absolute; /*para eliminar el ancho feísimo que tenia el menu*/
     top: 90px; /*para que suba bello al ser seleccionado*/
     padding: 14px 0px;

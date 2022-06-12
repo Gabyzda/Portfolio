@@ -128,7 +128,9 @@ nav > ul > li > ul > li > a:hover{
 
 .bienvenida h1{
     width: 300px;
-    margin-left: 100px;
+    text-align: right;
+    margin-left: 300px;
+    margin-top: -300px;
     letter-spacing: 3px;
     font-size: 30px;
     line-height: 40px;

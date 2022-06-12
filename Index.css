@@ -149,7 +149,7 @@ nav > ul > li > ul > li > a:hover{
 
 .Desc_1{
     width: 650px;
-    height: 600px;
+    height: 400px;
     margin-top: -10px;
     margin-left: 592px;
     padding: 10px;
@@ -172,8 +172,20 @@ nav > ul > li > ul > li > a:hover{
 
 .Desc_1 > p{
     font-size: 15px;
-    *text-transform: uppercase;
+    margin-bottom: 80px;
     line-height: 20px;
     letter-spacing: 1px;
     color: #999185;
+}
+
+.Desc_1 > a > span{
+    font-size: 15px;
+    margin-top: 50px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 15px;
+    color: #614030;
+    border-style: solid;
+    border-color: #614030;
 }

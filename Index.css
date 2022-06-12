@@ -3,19 +3,96 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: sans-serif;
 }
 
 .container_header{
-    height: 200px;
-    display: block;
+    height: 100px;
 }
 
-.contenedor_logo, menu_principal{
+.contenedor_logo{
     width: 100%;
-    height: 100px;
-    display: flex;
+    height: 100%x;
+    margin:auto;
+	text-align:center;
 }
 
 .contenedor_logo > a > img{
-    height: 100px;
+    height: 150px;
+}
+
+.menu_principal{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 0px 20px; /*para que no se pegue al costado en responsive*/
+    height: 100%; /*para que detecte su proporcion vertical*/
+    background-color: #ced5de; /*para probar submenu*/
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{  /*se usa ">" para que se haga la modificacion a este solamente, no a los hijos*/
+    height: 100%;
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+
+nav > ul > li{
+    height: 100%;
+    list-style: none;
+    position: relative; /*porque quiero que se relacione el submenu a su padre*/
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /*centro vertical*/
+    padding: 14px; /*para separar uno de otro*/
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #262020;
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.1); /*para que crezca un poquito*/
+}
+
+/*submenu*/
+
+nav > ul > li > ul{
+    width: 200px;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /*podría no colocarlo... peeero*/
+    background-color: #ced5de;
+    position: absolute; /*para eliminar el ancho feísimo que tenia el menu*/
+    top: 90px; /*para que suba bello al ser seleccionado*/
+    padding: 14px 0px;
+    visibility: hidden; /*para que esté oculto*/
+    opacity: 0; /*para lograr animacion hover*/
+    z-index: 10; /*para que se mantenga por encima de todo*/
+}
+
+nav > ul > li:hover > ul{ /*hover en li porque el papá manda a salir*/
+    visibility: visible;
+    opacity: 1;
+}
+
+nav > ul > li > ul > li > a{
+    display: block;
+    padding: 6px;
+    margin-top: 8px; /*para que se separe uno del otro*/
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #262020;
+}
+
+nav > ul > li > ul > li > a:hover{
+    transform: scale(1.1); /*para el efecto hover*/
+
 }

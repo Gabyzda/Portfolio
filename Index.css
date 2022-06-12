@@ -42,6 +42,7 @@ nav > ul{  /*se usa ">" para que se haga la modificacion a este solamente, no a 
     justify-content:center;
     margin: auto;
     text-align: center;
+    letter-spacing: 2px;
 }
 
 nav > ul > li{
@@ -147,16 +148,32 @@ nav > ul > li > ul > li > a:hover{
 }
 
 .Desc_1{
-    width: 555px;
-    height: 260px;
+    width: 650px;
+    height: 600px;
     margin-top: -10px;
     margin-left: 592px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
     border-style:solid;
     border-color: #ced5de;
 }
 
 .Desc_1 > h2{
-    margin-bottom: 32px;
-    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 35px;
+    letter-spacing: 3px;
+    color:#614030;
+}
+
+.Desc_1 > p{
+    font-size: 15px;
+    *text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #999185;
 }

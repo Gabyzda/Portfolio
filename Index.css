@@ -149,10 +149,10 @@ nav > ul > li > ul > li > a:hover{
 
 .Desc_1{
     width: 650px;
-    height: 400px;
+    height: 500px;
     margin-top: -10px;
     margin-left: 592px;
-    padding: 10px;
+    padding: 10px 60px;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -163,10 +163,11 @@ nav > ul > li > ul > li > a:hover{
 .Desc_1 > h2{
     margin-top: 20px;
     margin-bottom: 40px;
-    font-size: 28px;
-    text-transform: uppercase;
-    line-height: 35px;
+    font-size: 38px;
+    *text-transform: uppercase;
+    line-height: 45px;
     letter-spacing: 3px;
+    font-weight: 100;
     color:#614030;
 }
 
@@ -179,10 +180,10 @@ nav > ul > li > ul > li > a:hover{
 }
 
 .Desc_1 > a > span{
-    font-size: 15px;
+    font-size: 12px;
     margin-top: 50px;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-weight: 550;
+    letter-spacing: 1px;
     text-transform: uppercase;
     padding: 20px 15px;
     color: #614030;
@@ -191,7 +192,7 @@ nav > ul > li > ul > li > a:hover{
 }
 
 .adorno_desc >img{
-    width: 300px;
-    margin-left:500px;
-    margin-top: -50px;
+    width: 500px;
+    margin-left:160px;
+    margin-top: -250px;
 }

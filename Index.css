@@ -139,8 +139,8 @@ nav > ul > li > ul > li > a:hover{
 
 .linea1{
     width: 595px;
-    height: 100px;
-   
+    height: 150px;
+    margin-top: -10px;
     border-style: none dashed none none;
     border-color: #ced5de;
 }

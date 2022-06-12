@@ -115,3 +115,13 @@ nav > ul > li > ul > li > a:hover{
     transform: scale(1.1); /*para el efecto hover*/
 
 }
+
+/*COMPLEMENTOS HEADER*/
+
+.mi_nombre{
+    width: 40px;
+}
+
+.bienvenida{
+
+}

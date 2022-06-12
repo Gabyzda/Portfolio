@@ -150,10 +150,13 @@ nav > ul > li > ul > li > a:hover{
     width: 555px;
     height: 260px;
     margin-top: -10px;
-    font-size: 16px;
-    margin-left: 40px;
+    margin-left: 592px;
+    padding: 10px;
     border-style:solid;
     border-color: #ced5de;
+}
 
-
+.Desc_1 > h2{
+    margin-bottom: 32px;
+    font-size: 40px;
 }

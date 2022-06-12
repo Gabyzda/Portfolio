@@ -56,7 +56,7 @@ nav > ul > li > a{
     align-items: center; /*centro vertical*/
     padding: 14px; /*para separar uno de otro*/
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     color: #262020;
 }
 
@@ -72,6 +72,13 @@ nav > ul > li > a:hover{
 #item_medio2{
     *margin-left: 100px;
     padding-left: 300px;
+}
+
+header{
+    background-image: url(https://drive.google.com/uc?export=view&id=1yNDZHRpcBAGJXkTRqJvCLvKR9m76OiO6);
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*submenu*/

@@ -118,18 +118,22 @@ nav > ul > li > ul > li > a:hover{
 
 /*COMPLEMENTOS HEADER*/
 
+.name__b{
+    display: block;    
+}
+
 .mi_nombre > img{
     width: 600px;
     margin-left: 40px;
     margin-bottom: 200px;
     margin-top: -5000px;
-    padding-top: -100px ;
+    padding-top: -100px;
     color: #262020;
 }
 
 .bienvenida h1{
     width: 150px;
-    margin-left: 80px;
+    margin-left: 150px;
     letter-spacing: 3px;
     font-size: 30px;
     line-height: 40px;

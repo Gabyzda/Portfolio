@@ -189,3 +189,10 @@ nav > ul > li > ul > li > a:hover{
     border-style: solid;
     border-color: #614030;
 }
+
+.adorno_desc >img{
+    width: 200px;
+    margin-left:450px;
+    margin-top: -40px;
+    overflow: hidden;
+}

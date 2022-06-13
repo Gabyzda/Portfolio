@@ -215,6 +215,7 @@ nav > ul > li > ul > li > a:hover{
     overflow: hidden;
     *margin: 20px;
     text-align: center;
+    position: relative;
     transition: all 0.25s;
 }
 
@@ -224,6 +225,21 @@ nav > ul > li > ul > li > a:hover{
 }
 
 .container_columna .column img{
-    *width: auto;
+    width: 350px;
     height: 430px;
+    object-fit: cover;
+    *position: relative;
+    *visibility: hidden;
+}
+
+.container_columna .column a{
+font-weight: 400;
+letter-spacing: 1px;
+position: absolute;
+top: 5%;
+left: 5%;
+text-decoration: none;
+text-transform: uppercase;
+color: #f5efec;
+text-shadow: 0 0 8px #262020;
 }

@@ -250,6 +250,14 @@ text-shadow: 0 0 8px #262020;
     margin-top: 40px;
 }
 
+.lets_go h2{
+    color: #704446;
+    letter-spacing: 2px;
+    font-size: 38px;
+    line-height: 43px;
+    font-weight: 600;
+}
+
 /* Elementos de tag <fieldset>*/
 fieldset {
     border: 0;

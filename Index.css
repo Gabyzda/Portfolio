@@ -197,3 +197,23 @@ nav > ul > li > ul > li > a:hover{
     margin-top: -250px;
 }
 
+.container_columna{
+    width: 100%;
+    height: 430px;
+    display: flex;
+    *flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.container_columna .column{
+    width: 350px;
+    height: 430px;
+    *border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    *margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}

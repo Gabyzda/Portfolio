@@ -243,3 +243,25 @@ text-transform: uppercase;
 color: #f5efec;
 text-shadow: 0 0 8px #262020;
 }
+
+/*Inicio de formulario*/
+
+/* Elementos de tag <fieldset>*/
+fieldset {
+    border: 0;
+}
+
+form{
+    color: #999185;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+/* Elementos de tags <input>, <textarea> e <button> */
+input, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    border-radius: 5px;
+}

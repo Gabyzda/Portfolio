@@ -384,3 +384,11 @@ form .botao {
     letter-spacing: 1px;
     color: #999185;
 }
+
+.linea2{
+    width: 400px;
+    height: 300px;
+    margin-top: 30px;
+    border-style: none dashed none none;
+    border-color: #ced5de;
+}

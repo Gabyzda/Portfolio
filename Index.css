@@ -322,6 +322,8 @@ left: 15px;
 }
 
 form .botao {
+    width: auto;
+    text-transform: uppercase;
     justify-content: center;
     text-align: center;
     font-size: 1.2em;

@@ -241,7 +241,7 @@ text-shadow: 0 0 8px #262020;
 
 .lets_go{
     width: 500px;
-    height: 700px;
+    height: 500px;
     display: flex;
     margin: auto;
     
@@ -354,31 +354,30 @@ form .botao {
 
 /*penúltimo bloque*/
 
-.Desc_1{
-    width: 650px;
-    height: 500px;
+.contenedor_camino{
+    width: 550px;
+    height: 300px;
     margin-top: -10px;
-    margin-left: 592px;
+    margin-left: 200px;
     padding: 10px 60px;
     display: flex;
     flex-direction: column;
-    text-align: right;
+    text-align: left;
     border-style:solid;
     border-color: #ced5de;
 }
 
-.Desc_1 > h2{
+.contenedor_camino > h2{
     margin-top: 20px;
     margin-bottom: 40px;
     font-size: 38px;
-    *text-transform: uppercase;
     line-height: 45px;
     letter-spacing: 3px;
     font-weight: 100;
     color:#614030;
 }
 
-.Desc_1 > p{
+.contenedor_camino > p{
     font-size: 15px;
     margin-bottom: 80px;
     line-height: 20px;

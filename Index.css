@@ -351,3 +351,37 @@ form .botao {
 .botao, select{
     cursor: pointer;
 }
+
+/*penúltimo bloque*/
+
+.Desc_1{
+    width: 650px;
+    height: 500px;
+    margin-top: -10px;
+    margin-left: 592px;
+    padding: 10px 60px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    border-style:solid;
+    border-color: #ced5de;
+}
+
+.Desc_1 > h2{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 38px;
+    *text-transform: uppercase;
+    line-height: 45px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    color:#614030;
+}
+
+.Desc_1 > p{
+    font-size: 15px;
+    margin-bottom: 80px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #999185;
+}

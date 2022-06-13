@@ -100,22 +100,17 @@
         <h2>Mantenha-se atualizado</h2>
         <p>Fique por dentro das tendências de marketing, histórias de sucesso e muito mais.</p>
         <div class="formulario">
-            
+
             <form>
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
 
-                <fieldset class="grupo">
-
-                    <div class="campo">
-                        <label for="nome"><strong>Nome</strong></label>
-                        <input type="text" name="nome" id="nome" required>
-                    </div>
-
-                    <div class="campo">
-                        <label for="sobrenome"><strong>Sobrenome</strong></label>
-                        <input type="text" name="sobrenome" id="sobrenome" required>
-                    </div>
-
-                </fieldset>
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                </div>
 
                 <div class="campo">
                     <label for="email"><strong>Email</strong></label>
@@ -138,7 +133,8 @@
                 <div class="campo">
                     <br>
                     <label for="experiencia"><strong>deixe seu comentário aqui </strong></label>
-                    <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+                    <input type="text" name="mensaje" id="mensaje">
+                    
                 </div>
 
                 <!-- Botão para enviar o formulário -->

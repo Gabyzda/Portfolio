@@ -407,11 +407,11 @@ form .botao {
     height: 100%;
 }
 
-.ultimo_boton{
+.ultimo_boton > a{
     font-size: 12px;
     margin-top:-100px;
     margin-left:100px;
-    width: 100%;
+    width: 100px;
     font-weight: 550;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -419,4 +419,17 @@ form .botao {
     color: #614030;
     border-style: solid;
     border-color: #614030;
+}
+
+.logo_pie{
+    height: 100px;
+    width: 100px;
+    background-color: #614030;
+    border-radius: 50%;
+}
+
+.logo_pie > a > img{
+    width: 100%;
+    border-color: #262020;
+    
 }

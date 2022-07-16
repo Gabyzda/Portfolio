@@ -17,4 +17,6 @@ function AddRegistroNovo(){
     let nomeUsuario = nome.value;
     let sobrenomeUsuario = idade.value;
     let emailUsuario = email.value;
+    let usuario = new Usuario(nomeUsuario,sobrenomeUsuario,emailUsuario)
+    usuarios.push(usuario);
 }

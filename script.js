@@ -1,0 +1,1 @@
+let usuarios = []; //array que guarda los objetos de personas

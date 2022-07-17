@@ -12,7 +12,7 @@
  let sobrenome = document.querySelector('#input_sobrenome')
  let email = document.querySelector('#input_email')
 
- // función para guardar registro
+ // función para guardar registro, add mensaje de error
  function AddRegistroNovo() {
      let nomeUsuario = nome.value;
      let sobrenomeUsuario = sobrenome.value;
@@ -33,12 +33,15 @@
      if (nome.value == "") {
          alert("O campo Nome é obrigatório. Favor preenchê-lo.")
          nome.focus()
+         return 0
      } else if (sobrenome.value == "") {
          alert("O campo Sobrenome é obrigatório. Favor preenchê-lo.")
          sobrenome.focus()
+         return 0
      } else if (email.value == "") {
-         alert("O campo Email é obrigatório.Favor preenchê-lo.")
+         alert("O campo Email é obrigatório. Favor preenchê-lo.")
          email.focus()
+         return 0
      }
  }
 

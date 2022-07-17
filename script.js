@@ -13,6 +13,7 @@
  let nome = document.querySelector('#input_nome')
  let sobrenome = document.querySelector('#input_sobrenome')
  let email = document.querySelector('#input_email')
+ let error = document.querySelector('#error')
 
  // función para guardar registro, add mensaje de error
  function AddRegistroNovo() {

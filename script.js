@@ -35,10 +35,10 @@
          nome.focus()
      } else if (sobrenome.value == "") {
          alert("O campo Sobrenome é obrigatório. Favor preenchê-lo.")
+         sobrenome.focus()
      } else if (email.value == "") {
-         alert(""
-             O campo Email é obrigatório.Favor preenchê - lo.
-             "")
+         alert("O campo Email é obrigatório.Favor preenchê-lo.")
+         email.focus()
      }
  }
 
@@ -47,3 +47,6 @@
      function (evt) {
          evt.preventDefault();
      })
+
+    //  Evento para validación de campo
+    document.querySelector('#btn_submit').addEventListener('click', ValidacaoCampo)

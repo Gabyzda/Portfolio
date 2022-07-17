@@ -352,6 +352,11 @@ form .botao {
     cursor: pointer;
 }
 
+#error{
+color: red;
+font-size: 10px;
+}
+
 /*penúltimo bloque*/
 
 .contenedor_camino{

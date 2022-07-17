@@ -1,5 +1,7 @@
  //array que guarda los objetos de personas
  let usuarios = [];
+//  array que guarda los mensajes de error
+ let smsError = [];
 
  // función construtora para recaudar los datos de cada usuario
  function Usuario(nome, sobrenome, email) {
@@ -27,7 +29,8 @@
          //  sobrenome.value = ""
          //  email.value = ""
          form.reset();
-     }
+     }else 
+    }
 
      //  garantizar que los campos estén correctamente preenchidos, "Validación de datos" y/o que no estén vacios al clicar botón
      function ValidacaoCampo() {

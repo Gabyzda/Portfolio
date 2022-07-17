@@ -31,7 +31,7 @@
          //  email.value = ""
          form.reset();
      } else {
-        error.textContent = smsError.join(', ')
+         error.textContent = smsError.join(', ')
      }
  }
 
@@ -41,6 +41,9 @@
          smsError.push("O campo Nome é obrigatório. Favor preenchê-lo.")
          nome.focus()
          return 0
+     }
+     if (nome.value.lenght < 2) {
+         smsError.push("Escrever um nome Válido por favor")
      } else if (sobrenome.value == "") {
          smsError.push("O campo Sobrenome é obrigatório. Favor preenchê-lo.")
          sobrenome.focus()

@@ -47,6 +47,7 @@
      function (evt) {
          evt.preventDefault();
      })
+ document.querySelector('#btn_submit').addEventListener('click', AddRegistroNovo)
 
-    //  Evento para validación de campo
-    document.querySelector('#btn_submit').addEventListener('click', ValidacaoCampo)
+ //  Evento para validación de campo
+ document.querySelector('#btn_submit').addEventListener('click', ValidacaoCampo)

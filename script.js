@@ -1,7 +1,7 @@
  //array que guarda los objetos de personas
 let usuarios = [];
 
-// função construtora para recaudar los datos de cada usuario
+// función construtora para recaudar los datos de cada usuario
 function Usuario(nome,sobrenome,email){ 
     this.nome = nome;
     this.sobrenome = sobrenome;
@@ -9,14 +9,16 @@ function Usuario(nome,sobrenome,email){
 }
 // Para guardar los valores de cada input
 let nome = document.querySelector('#input_nome')
-let idade = document.querySelector('#input_idade')
+let sobrenome = document.querySelector('#input_sobrenome')
 let email = document.querySelector('#input_email')
 
-// funcion para guardar registro
+// función para guardar registro
 function AddRegistroNovo(){ 
     let nomeUsuario = nome.value;
-    let sobrenomeUsuario = idade.value;
+    let sobrenomeUsuario = sobrenome.value;
     let emailUsuario = email.value;
+    // Nuevo objeto Usuario para crear conjunto de valores de usuario desde input
     let usuario = new Usuario(nomeUsuario,sobrenomeUsuario,emailUsuario)
+//  Vamos a crear una lista de los usuarios a través de estos nuevos usuarios
     usuarios.push(usuario);
 }

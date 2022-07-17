@@ -44,15 +44,21 @@
      }
      if (nome.value.lenght < 2) {
          smsError.push("Escrever um nome Válido por favor")
-     } else if (sobrenome.value == "") {
+     }
+      else if (sobrenome.value == "") {
          smsError.push("O campo Sobrenome é obrigatório. Favor preenchê-lo.")
          sobrenome.focus()
          return 0
-     } else if (email.value == "") {
+     }
+      else if (email.value == "") {
          smsError.push("O campo Email é obrigatório. Favor preenchê-lo.")
          email.focus()
          return 0
      }
+     else if (email.value.indexOf('@)') ==-1 || email.value.indexOf('.') ==-1) {
+        smsError.push("e-mail inválido")
+     }
+
  }
 
  // linkar la función con el botón y add preventDefault para que la pag no se recargue con el click

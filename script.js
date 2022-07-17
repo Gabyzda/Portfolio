@@ -30,7 +30,9 @@
          //  sobrenome.value = ""
          //  email.value = ""
          form.reset();
-     } else
+     } else {
+        error.textContent = smsError.join(', ')
+     }
  }
 
  //  garantizar que los campos estén correctamente preenchidos, "Validación de datos" y/o que no estén vacios al clicar botón

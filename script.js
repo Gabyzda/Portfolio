@@ -53,7 +53,7 @@ function marqueHabilitarSubmit() {
     if (errors.length == 0 && naoValidado.length == 0) {
         ativarSubmit();
     } else {
-        disableSubmit();
+        desativarSubmit();
     }
 }
 // estas dos funciones que vienen son para habilitar o desabilitar botón 
@@ -65,7 +65,7 @@ function ativarSubmit() {
     submit.disabled = false;
 }
 
-function disableSubmit() {
+function desativarSubmit() {
     let form = document.querySelector('#form');
     let submit = form.querySelector('[type=submit]');
 

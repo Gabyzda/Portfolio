@@ -1,78 +1,78 @@
-function validateEmail (e) {
-    let field = e.target;
-    let fieldValue = field.value;
+function validacaoEmail (e) { /* Agarrar un valor cuando usuario clica */
+    let campo = e.target; /*se refiere al elemento clicado */
+    let campoValue = campo.value;
 
-    if (fieldValue.search('@') == -1) {
-        displayError('Email não é válido', field);
+    if (campoValue.search('@') == -1) { /*usamos el value.search para buscar el arroba*/
+        displayError('Email inválido', campo);
     } else {
-        clearError(field);
+        borrarError(campo); /*si el @ es encontrado, limpiamos el error*/
     }
 
-    field.classList.remove('not-validated');
-    checkEnableSubmit();
+    campo.classList.remove('nao-validado'); /*clase agregada para decir que todos los input fueron validados y se borra */
+    marqueHabilitarSubmit(); /*Aqui se checa si es válido o no*/
 }
 
-function validateNotEmpty(e) {
-    let field = e.target;
-    let fieldValue = field.value;
+function validarNaoVazio(e) {
+    let campo = e.target;
+    let campoValue = campo.value;
 
-    if (fieldValue == '') {
-        displayError('Campo não pode ser vazio', field);
+    if (campoValue == ' ') { /*Aqui usamos un campo en blanco para checar que no esté vacío */
+        displayError('Campo não pode ser vazio', campo);
     } else {
-        clearError(field);
+        borrarError(campo);
     }
 
-    field.classList.remove('not-validated');
-    checkEnableSubmit();
+    campo.classList.remove('nao-validado');
+    marqueHabilitarSubmit();
 }
 
-function displayError(message, field) {
-    clearError(field)
-    field.classList.add('is-invalid');
-    let error = document.createElement('small');
+function displayError(mensagem, campo) { /*Aquí pasamos un mensaje y un campo */
+    borrarError(campo)
+    campo.classList.add('e-invalido');
+    let error = document.createElement('small'); /*Para colocar un texto de error dentro de él*/
     error.style.color = 'red';
-    error.classList.add('error-message');
-    error.textContent = message;
-    field.parentElement.appendChild(error);
+    error.classList.add('mensagem_error');
+    error.textContent = mensagem;
+    campo.parentElement.appendChild(error);
 }
 
-function clearError(field) {
-    let container = field.parentElement;
-    let error = container.querySelector('.error-message');
-    if (error) {
+function borrarError(campo) {
+    let container = campo.parentElement;
+    let error = container.querySelector('.mensagem_error');
+    if (error) { /*si es que hay error, se remueve éso */
         container.removeChild(error);
     }
-    field.classList.remove('is-invalid');
+    campo.classList.remove('e-invalido');
 }
 
-function checkEnableSubmit() {
+function marqueHabilitarSubmit() {
     let form = document.querySelector('#form');
-    let notValidated = form.querySelectorAll('.not-validated');
-    let errors = form.querySelectorAll('.is-invalid');
+    let naoValidado = form.querySelectorAll('.nao-validado'); /*ver si hay campos no validados dentro de formulario */
+    let errors = form.querySelectorAll('.e-invalido'); /*y tambien inválidos */
 
-    if (errors.length == 0 && notValidated.length == 0) {
-        enableSubmit();
+    if (errors.length == 0 && naoValidado.length == 0) {
+        ativarSubmit();
     } else {
         disableSubmit();
     }
 }
-
-function enableSubmit() {
+// estas dos funciones que vienen son para habilitar o desabilitar botón 
+function ativarSubmit() {
     let form = document.querySelector('#form');
-    let submit = form.querySelector('[type=submit');
+    let submit = form.querySelector('[type=submit]');
 
 
-    submit.disable = false;
+    submit.disabled = false;
 }
 
 function disableSubmit() {
     let form = document.querySelector('#form');
-    let submit = form.querySelector('[type=submit');
+    let submit = form.querySelector('[type=submit]');
 
 
-    submit.disable = true;
+    submit.disabled = true;
 }
 
-document.querySelectorAll('input').forEach(el => el.classList.add ('not-validated'));
-document.querySelectorAll('input.email').forEach(el => el.addEventListener ('click', validateEmail));
-document.querySelectorAll('input:required').forEach(el => el.addEventListener ('click', validateNotEmpty));
+document.querySelectorAll('input').forEach(el => el.classList.add ('nao-validado')); /*Todos los elementos input*/
+document.querySelectorAll('input.email').forEach(el => el.addEventListener ('click', validacaoEmail));
+document.querySelectorAll('input:required').forEach(el => el.addEventListener ('click', validarNaoVazio));

@@ -1,78 +1,73 @@
-function validacaoEmail (e) { /* Agarrar un valor cuando usuario clica */
-    let campo = e.target; /*se refiere al elemento clicado */
-    let campoValue = campo.value;
+ // array que guarda los objetos de personas
+ let usuarios = [];
+ //  array que guarda los mensajes de error
+ let smsError = [];
 
-    if (campoValue.search('@') == -1) { /*usamos el value.search para buscar el arroba*/
-        displayError('Email inválido', campo);
-    } else {
-        borrarError(campo); /*si el @ es encontrado, limpiamos el error*/
-    }
+ // función construtora para recaudar los datos de cada usuario
+ function Usuario(nome, sobrenome, email) {
+     this.nome = nome;
+     this.sobrenome = sobrenome;
+     this.email = email
+ }
+ // Para guardar los valores de cada input
+ let nome = document.querySelector('#input_nome')
+ let sobrenome = document.querySelector('#input_sobrenome')
+ let email = document.querySelector('#input_email')
+ let error = document.querySelector('#error')
 
-    campo.classList.remove('nao-validado'); /*clase agregada para decir que todos los input fueron validados y se borra */
-    marqueHabilitarSubmit(); /*Aqui se checa si es válido o no*/
-}
+ // función para guardar registro, add mensaje de error
+ function AddRegistroNovo() {
+     if (ValidacaoCampo() != 0) {
+         let nomeUsuario = nome.value;
+         let sobrenomeUsuario = sobrenome.value;
+         let emailUsuario = email.value;
+         // Nuevo objeto Usuario para crear conjunto de valores de usuario desde input
+         let usuario = new Usuario(nomeUsuario, sobrenomeUsuario, emailUsuario)
+         //  Vamos a crear una lista de los usuarios a través de este new usuario
+         usuarios.push(usuario);
+         //  limpiar los inputs, no estoy segura...
+         //  nome.value = ""
+         //  sobrenome.value = ""
+         //  email.value = ""
+         form.reset();
+     } else {
+         error.textContent = smsError.join(', ')
+     }
+ }
 
-function validarNaoVazio(e) {
-    let campo = e.target;
-    let campoValue = campo.value;
+ //  garantizar que los campos estén correctamente preenchidos, "Validación de datos" y/o que no estén vacios al clicar botón
+ function ValidacaoCampo() {
+     if (nome.value == "") {
+         smsError.push("O campo Nome é obrigatório. Favor preenchê-lo.")
+         nome.focus()
+         return 0
+     }
+     if (nome.value.lenght < 2) {
+         smsError.push("Escrever um nome Válido por favor")
+     }
+      else if (sobrenome.value == "") {
+         smsError.push("O campo Sobrenome é obrigatório. Favor preenchê-lo.")
+         sobrenome.focus()
+         return 0
+     }
+      else if (email.value == "") {
+         smsError.push("O campo Email é obrigatório. Favor preenchê-lo.")
+         email.focus()
+         return 0
+     }
+     else if (email.value.indexOf('@)') ==-1 || email.value.indexOf('.') ==-1) {
+        smsError.push("e-mail inválido")
+     }
 
-    if (campoValue == ' ') { /*Aqui usamos un campo en blanco para checar que no esté vacío */
-        displayError('Campo não pode ser vazio', campo);
-    } else {
-        borrarError(campo);
-    }
+ }
 
-    campo.classList.remove('nao-validado');
-    marqueHabilitarSubmit();
-}
+//  // linkar la función con el botón y add preventDefault para que la pag no se recargue con el click
+//  document.querySelector('#btn_submit').addEventListener('click',
+//      function (evt) {
+//          evt.preventDefault();
+//      })
+//  document.querySelector('#btn_submit').addEventListener('click', AddRegistroNovo)
 
-function displayError(mensagem, campo) { /*Aquí pasamos un mensaje y un campo */
-    borrarError(campo)
-    campo.classList.add('e-invalido');
-    let error = document.createElement('small'); /*Para colocar un texto de error dentro de él*/
-    error.style.color = 'red';
-    error.classList.add('mensagem_error');
-    error.textContent = mensagem;
-    campo.parentElement.appendChild(error);
-}
+//  //  Evento para validación de campo
+//  document.querySelector('#btn_submit').addEventListener('click', ValidacaoCampo)
 
-function borrarError(campo) {
-    let container = campo.parentElement;
-    let error = container.querySelector('.mensagem_error');
-    if (error) { /*si es que hay error, se remueve éso */
-        container.removeChild(error);
-    }
-    campo.classList.remove('e-invalido');
-}
-
-function marqueHabilitarSubmit() {
-    let form = document.querySelector('#form');
-    let naoValidado = form.querySelectorAll('.nao-validado'); /*ver si hay campos no validados dentro de formulario */
-    let errors = form.querySelectorAll('.e-invalido'); /*y tambien inválidos */
-
-    if (errors.length == 0 && naoValidado.length == 0) {
-        ativarSubmit();
-    } else {
-        desativarSubmit();
-    }
-}
-// estas dos funciones que vienen son para habilitar o desabilitar botón 
-function ativarSubmit() {
-    let form = document.querySelector('#form');
-    let submit = form.querySelector('[type=submit]');
-
-
-    submit.disabled = false;
-}
-
-function desativarSubmit() {
-    let form = document.querySelector('#form');
-    let submit = form.querySelector('[type=submit]');
-
-
-    submit.disabled = true;
-}
-
-document.querySelectorAll('input').forEach(el => el.classList.add ('nao-validado')); /*Todos los elementos input*/
-document.querySelectorAll('input.email').forEach(el => el.addEventListener ('click', validacaoEmail));
-document.querySelectorAll('input:required').forEach(el => el.addEventListener ('click', validarNaoVazio));

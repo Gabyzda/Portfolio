@@ -299,7 +299,8 @@ form {
     padding: 10px;
     cursor: pointer;
 }
-/* quedé por aquí 1am */
+
+
 /* Elementos de classe "campo" */
 .campo {
     margin-bottom: 10px;
@@ -336,12 +337,16 @@ form .campo .pregunta::before {
 
 .campo input[type="text"],
 .campo input[type="email"] {
-    width: 500px;
+    width: 100%;
     padding: 0.2em;
     outline: 0;
     border-style: none none solid none;
     border-color: #704446;
     display: block;
+    background: #ffffff;
+    height: 15px;
+    line-height: 15px;
+    transition: .3s esase all;
 }
 
 .campo input[type="radio"] {

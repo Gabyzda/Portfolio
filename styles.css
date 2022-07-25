@@ -296,10 +296,32 @@ form {
 .form_label {
     display: block;
     font-weight: 700;
-    padding: 10px;
+    padding: 10px none 10px 10px;
     cursor: pointer;
 }
 
+.form_input-error {
+    font-size: 5px;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: none;
+}
+
+.form_input-error-active {
+    display: block
+}
+
+.form_error {
+    height: 20px;
+    background: rgb(138, 4, 4);
+    padding: 0 15px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.form_error-active {
+    display: block;
+}
 
 /* Elementos de classe "campo" */
 .campo {
@@ -386,10 +408,24 @@ select {
     cursor: pointer;
 }
 
+.btn_vamos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.msj_exito {
+    display: none;
+}
+
+.msj_exito-active {
+    display: block;
+}
+/* 
 #error {
     color: red;
     font-size: 10px;
-}
+} */
 
 /*penúltimo bloque*/
 

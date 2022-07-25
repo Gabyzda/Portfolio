@@ -99,28 +99,30 @@
     <div class="lets_go">
         <h2>Mantenha-se atualizado</h2>
         <p>Fique por dentro das tendências de marketing, histórias de sucesso e muito mais.</p>
+
         <div class="formulario">
 
-            <form id="form">
-                <div class="campo">
-                    <label for="nome">Nome
-                        <input type="text" name="nome" id="input_nome" required>
-                    </label>
+            <form action="" class="form" id="form">
+
+                <div class="campo" id="campo_nome">
+                    <label for="nome" class="form_label">Nome</label>
+                    <input type="text" class="form_input" name="nome" id="nome">
+                    <p class="form_input-error">O campo Nome é obrigatório. Favor preenchê-lo</p>
                 </div>
 
-                <div class="campo">
-                    <label for="sobrenome">Sobrenome
-                        <input type="text" name="sobrenome" id="input_sobrenome" required>
-                    </label>
+                <div class="campo" id="campo_sobrenome">
+                    <label for="sobrenome" class="form_label">Sobrenome</label>
+                    <input type="text" class="form_input" name="sobrenome" id="sobrenome">
+                    <p class="form_input-error">O campo Sobrenome é obrigatório. Favor preenchê-lo</p>
                 </div>
 
-                <div class="campo">
-                    <label for="email">Email
-                        <input type="email" class="email" name="email" id="input_email" autocomplete="email" required>
-                    </label>
+                <div class="campo" id="campo_email">
+                    <label for="email" class="form_label">Email</label>
+                    <input type="email" class="form_input" name="email" id="email">
+                    <p class="form_input-error">O campo Email é obrigatório. Favor preenchê-lo</p>
                 </div>
 
-                <div class="campo">
+                <div class="campo" id="campo_pregunta">
                     <label>O meu trabalho centra-se em empresas que desenvolvem o seu marketing
                         online. Quer atrair novos clientes?
                     </label>
@@ -133,17 +135,23 @@
                 </div>
 
                 <!-- Caixa de texto -->
-                <div class="campo">
+                <div class="campo" id="campo_cometario">
                     <br>
                     <label>Deixe seu comentário aqui</label>
                     <input type="text" name="mensaje" id="mensaje">
 
                 </div>
 
-                <!-- Botão para enviar o formulário -->
-                <button id="btn_submit" class="botao" type="submit" onsubmit="">Vamos</button>
+                <div class="form_error" id="form_error">
+                    <p><b>Error:</b>Por favor, preencha o formulário corretamente</p>
+                </div>
 
-                <div id="error"></div>
+                <!-- Botão para enviar o formulário -->
+                <div class="campo btn_vamos">
+                    <button class="botao" type="submit">Vamos</button>
+                    <p class="msj_exito" id="msj_exito">formulário enviado com sucesso</p>
+                </div>
+
             </form>
         </div>
     </div>

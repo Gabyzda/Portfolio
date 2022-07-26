@@ -76,5 +76,8 @@ form.addEventListener('submit', (e) => {
         form.reset();
 
         document.getElementById('msj_exito').classList.add('msj_exito-active');
+        setTimeout(() => {
+            document.getElementById('msj_exito').classList.remove('msj_exito-active');
+        }, 5000);
     }
 });

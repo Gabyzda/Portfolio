@@ -74,5 +74,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (campos.nome && campos.sobrenome && campos.email) {
         form.reset();
+
+        document.getElementById('msj_exito').classList.add('msj_exito-active');
     }
 });

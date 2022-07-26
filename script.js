@@ -7,33 +7,40 @@ const expresiones = {
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 
+const campos = {
+    nome: false,
+    sobrenome: false,
+    email: false
+}
+
 // const validarForm = (e) => { por todos, pero no me gustó :(
 //     switch (e.target.name) {
 //         case "nome":
 //             if (expresiones.nome.test(e.tatget.value)) {
-//                 document.querySelector('#campo_nome .form_input-error').classList.remove(form_input-error-active);
+//                 document.querySelector('#campo_nome .form_input-error').classList.remove('form_input-error-active');
 //             } else {
-//                 document.querySelector('#campo_nome .form_input-error').classList.add(form_input-error-active);
+//                 document.querySelector('#campo_nome .form_input-error').classList.add('form_input-error-active');
 //             }
 //         break;
 
 //         case "sobrenome":
 //             if (expresiones.sobrenome.test(e.tatget.value)) {
-//                 document.querySelector('#campo_sobrenome .form_input-error').classList.remove(form_input-error-active);
+//                 document.querySelector('#campo_sobrenome .form_input-error').classList.remove('form_input-error-active');
 //             } else {
-//                 document.querySelector('#campo_sobrenome .form_input-error').classList.add(form_input-error-active);
+//                 document.querySelector('#campo_sobrenome .form_input-error').classList.add('form_input-error-active');
 //             }
 //         break;
         
 //         case "email":
 //             if (expresiones.email.test(e.tatget.value)) {
-//                 document.querySelector('#campo_email .form_input-error').classList.remove(form_input-error-active);
+//                 document.querySelector('#campo_email .form_input-error').classList.remove('form_input-error-active');
 //             } else {
-//                 document.querySelector('#campo_email .form_input-error').classList.add(form_input-error-active);
+//                 document.querySelector('#campo_email .form_input-error').classList.add('form_input-error-active');
 //             }
 //         break;
 //     }
 // }
+
 const validarForm = (e) => {
         switch (e.target.name) {
         case "nome":
@@ -51,8 +58,10 @@ const validarForm = (e) => {
 const validarCampo = (expresion, input, campo) => {
     if (expresion.test(input.value)) {
         document.querySelector(`#campo_${campo} .form_input-error`).classList.remove('form_input-error-active');
+        campos[campo] = true;
     } else {
         document.querySelector(`#campo_${campo} .form_input-error`).classList.add('form_input-error-active');
+        campos[campo] = false;
     }
 }
 

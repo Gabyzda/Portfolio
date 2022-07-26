@@ -260,12 +260,11 @@ nav>ul>li>ul>li>a:hover {
 
 .lets_go {
     width: 500px;
-    height: 500px;
-    display: flex;
+    *height: 500px;
+    *display: flex;
     margin: auto;
-
     letter-spacing: 2px;
-    flex-direction: column;
+    *flex-direction: column;
     margin-top: 80px;
 }
 
@@ -335,13 +334,13 @@ form .campo label {
     position: relative;
 }
 
-form .campo .pregunta {
-    padding: 5px 15px 5px 51px;
-    font-size: 12px;
-    color: #999185;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
+.radio p {
+    *padding: 5px 15px 5px 51px;
+    font-size: 14px;
+    color: #6d6251;
+    *display: inline-block;
+    *position: relative;
+    *cursor: pointer;
 }
 
 form .campo .pregunta::before {
@@ -376,7 +375,7 @@ form .campo .pregunta::before {
     border-bottom: 1px solid #262020;
 }
 
-form .botao {
+.botao {
     width: auto;
     text-transform: uppercase;
     justify-content: center;

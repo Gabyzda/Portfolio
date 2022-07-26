@@ -103,18 +103,20 @@
         <div>
 
             <form action="" class="form" id="form">
-                <!-- Grupo Nome -->
+
                 <div class="campo" id="campo_nome">
                     <label for="nome" class="form_label">Nome</label>
                     <input type="text" class="form_input" name="nome" id="nome">
-                    <p class="form_input-error">O campo Nome debe ter mínimo 2 dígitos, sem números. Favor preenchê-lo corretamente
+                    <p class="form_input-error">O campo Nome debe ter mínimo 2 dígitos, sem números. Favor preenchê-lo
+                        corretamente
                     </p>
                 </div>
 
                 <div class="campo" id="campo_sobrenome">
                     <label for="sobrenome" class="form_label">Sobrenome</label>
                     <input type="text" class="form_input" name="sobrenome" id="sobrenome">
-                    <p class="form_input-error">O campo Sobrenome debe ter mínimo 2 dígitos, sem números. Favor preenchê-lo
+                    <p class="form_input-error">O campo Sobrenome debe ter mínimo 2 dígitos, sem números. Favor
+                        preenchê-lo
                         corretamente</p>
                 </div>
 
@@ -124,38 +126,41 @@
                     <p class="form_input-error">O campo Email está errado. Favor preenchê-lo corretamente</p>
                 </div>
 
-                <div class="campo" id="campo_pregunta">
-                    <label>O meu trabalho centra-se em empresas que desenvolvem o seu marketing
-                        online. Quer atrair novos clientes?
-                    </label>
-                    <label class="pregunta">
-                        <input type="radio" name="opcion" value="Sim" checked>Sim
-                    </label>
-                    <label class="pregunta">
-                        <input type="radio" name="opcion" value="Não">Não
-                    </label>
+                <!-- <div class="campo" id="campo_pregunta"> -->
+                <div class="radio">
+                    <p>O meu trabalho centra-se em empresas que desenvolvem o seu marketing online. Quer atrair novos clientes?
+                    </p>
+
+                    <input type="radio" name="opcion" id="sim">
+                    <label for="sim">Sim</label>
+
+                    <input type="radio" name="opcion" id="nao">
+                    <label for="nao">Não</label>
                 </div>
 
-                <!-- Caixa de texto -->
-                <div class="campo" id="campo_cometario">
-                    <br>
-                    <label>Deixe seu comentário aqui</label>
-                    <input type="text" name="mensaje" id="mensaje">
-
-                </div>
-
-                <div class="form_error" id="form_error">
-                    <p><b>Error:</b> Por favor, preencha o formulário corretamente</p>
-                </div>
-
-                <!-- Botão para enviar o formulário -->
-                <div class="campo btn_vamos">
-                    <button class="botao" type="submit">Vamos</button>
-                    <p class="msj_exito" id="msj_exito">formulário enviado com sucesso</p>
-                </div>
-
-            </form>
+                <!-- </div> -->
         </div>
+
+        <!-- Caixa de texto -->
+        <div class="campo" id="campo_cometario">
+            <br>
+            <label>Deixe seu comentário aqui</label>
+            <input type="text" name="mensaje" id="mensaje">
+
+        </div>
+
+        <div class="form_error" id="form_error">
+            <p><b>Error:</b> Por favor, preencha o formulário corretamente</p>
+        </div>
+
+        <!-- Botão para enviar o formulário -->
+        <div class="campo btn_vamos">
+            <button class="botao" type="submit">Vamos</button>
+            <p class="msj_exito" id="msj_exito">formulário enviado com sucesso</p>
+        </div>
+
+        </form>
+    </div>
     </div>
     <!--penúltimo bloque-->
     <div class="contenedor_camino">

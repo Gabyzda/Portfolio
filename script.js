@@ -13,34 +13,6 @@ const campos = {
     email: false
 }
 
-// const validarForm = (e) => { por todos, pero no me gustó :(
-//     switch (e.target.name) {
-//         case "nome":
-//             if (expresiones.nome.test(e.tatget.value)) {
-//                 document.querySelector('#campo_nome .form_input-error').classList.remove('form_input-error-active');
-//             } else {
-//                 document.querySelector('#campo_nome .form_input-error').classList.add('form_input-error-active');
-//             }
-//         break;
-
-//         case "sobrenome":
-//             if (expresiones.sobrenome.test(e.tatget.value)) {
-//                 document.querySelector('#campo_sobrenome .form_input-error').classList.remove('form_input-error-active');
-//             } else {
-//                 document.querySelector('#campo_sobrenome .form_input-error').classList.add('form_input-error-active');
-//             }
-//         break;
-
-//         case "email":
-//             if (expresiones.email.test(e.tatget.value)) {
-//                 document.querySelector('#campo_email .form_input-error').classList.remove('form_input-error-active');
-//             } else {
-//                 document.querySelector('#campo_email .form_input-error').classList.add('form_input-error-active');
-//             }
-//         break;
-//     }
-// }
-
 const validarForm = (e) => {
     switch (e.target.name) {
         case "nome":
@@ -79,5 +51,7 @@ form.addEventListener('submit', (e) => {
         setTimeout(() => {
             document.getElementById('msj_exito').classList.remove('msj_exito-active');
         }, 5000);
+    } else {
+        document.getElementById('form_error').classList.add('form_error-active');
     }
 });

@@ -375,6 +375,16 @@ form .campo .pregunta::before {
     border-bottom: 1px solid #262020;
 }
 
+.radio {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.comentario {
+    font-size: 12px;
+    cursor: pointer;
+}
+
 .botao {
     width: auto;
     text-transform: uppercase;
@@ -420,6 +430,7 @@ select {
 .msj_exito-active {
     display: block;
 }
+
 /* 
 #error {
     color: red;

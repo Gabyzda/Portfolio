@@ -30,7 +30,7 @@ const campos = {
 //                 document.querySelector('#campo_sobrenome .form_input-error').classList.add('form_input-error-active');
 //             }
 //         break;
-        
+
 //         case "email":
 //             if (expresiones.email.test(e.tatget.value)) {
 //                 document.querySelector('#campo_email .form_input-error').classList.remove('form_input-error-active');
@@ -42,16 +42,16 @@ const campos = {
 // }
 
 const validarForm = (e) => {
-        switch (e.target.name) {
+    switch (e.target.name) {
         case "nome":
             validarCampo(expresiones.nome, e.target, 'nome');
-        break;
+            break;
         case "sobrenome":
             validarCampo(expresiones.sobrenome, e.target, 'sobrenome');
-        break;
+            break;
         case "email":
             validarCampo(expresiones.email, e.target, 'email');
-        break;
+            break;
     }
 }
 
@@ -72,4 +72,7 @@ inputs.forEach((input) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    if (campos.nome && campos.sobrenome && campos.email) {
+        form.reset();
+    }
 });
